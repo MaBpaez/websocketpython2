@@ -126,7 +126,7 @@ async def join(websocket, join_key):
 
     # Encuentra el juego Connect Four
     try:
-        game, connected = JOIN[join_key]
+        game, connected = JOIN[join_key]  # valor es una tupla.
 
     except KeyError:
         await error(websocket, "Game not found.")
